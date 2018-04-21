@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="searchContainer"
+>
+  <input
+    className="searchContainer__input"
+    type="text"
+  />
+  <div>
+    <div />
+  </div>
+  <button
+    className="searchContainer__button"
+  />
+</section>
+`;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="header"
+  >
+    <h1
+      className="header__h1"
+    >
+      Album Library
+    </h1>
+    <p
+      className="header__icon"
+    >
+      Click Me
+    </p>
+  </div>
+  <main
+    className="app__main"
+  >
+    <section
+      className="searchContainer"
+    >
+      <input
+        className="searchContainer__input"
+        type="text"
+      />
+      <div>
+        <div />
+      </div>
+      <button
+        className="searchContainer__button"
+      />
+    </section>
+    <div>
+      <div>
+        <div />
+      </div>
+    </div>
+  </main>
+</div>
+`;

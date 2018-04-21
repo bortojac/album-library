@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="header"
+>
+  <h1
+    className="header__h1"
+  >
+    Album Library
+  </h1>
+  <p
+    className="header__icon"
+  >
+    Click Me
+  </p>
+</div>
+`;

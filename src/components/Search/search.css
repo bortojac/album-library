@@ -1,0 +1,35 @@
+.searchContainer {
+  display: flex;
+  flex-flow: column;
+  /*flex: 1;*/
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.searchContainer--searchOpen {
+  max-height: 50%;
+}
+
+.searchContainer--searchClosed {
+  max-height: 0;
+}
+
+.searchContainer__input {
+  border: solid .2rem #000;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.searchContainer__button {
+  width: 5rem;
+  padding: .5rem;
+  align-self: flex-start;
+  margin: 1rem 0;
+  border: solid .2rem #000;
+}

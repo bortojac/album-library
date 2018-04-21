@@ -1,0 +1,19 @@
+html {
+  font-size: 16px;
+  font-family: 'Roboto Slab', serif;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+.app__main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  align-items: center;
+}
