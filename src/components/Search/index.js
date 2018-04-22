@@ -3,9 +3,7 @@ import { fetchSearchResults } from '../../store/actions';
 import Search from './Search';
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
-      searchResults: state.searchResults,
   };
 };
 

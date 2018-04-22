@@ -1,0 +1,30 @@
+.albumContainer {
+  display: flex;
+  min-height: 5rem;
+  margin: .5rem 0;
+  align-items: center;
+}
+
+.albumContainer__figure {
+  width: 5rem;
+  margin: .2rem;
+  flex: none;
+}
+
+.albumContainer__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.albumDescription {
+  display: flex;
+  list-style-type: none;
+  flex: 1;
+  margin: .2rem;
+  padding-left: .5rem;
+  flex-direction: column;
+}
+
+.albumContainer__icon {
+  margin-right: 1rem;
+}

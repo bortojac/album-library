@@ -2,17 +2,19 @@
 
 exports[`renders correctly 1`] = `
 <section
-  className="searchContainer"
+  className="searchContainer searchContainer--closed"
 >
   <input
     className="searchContainer__input"
-    type="text"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Search for an Artist or Album"
   />
-  <div>
-    <div />
-  </div>
   <button
     className="searchContainer__button"
-  />
+    type="button"
+  >
+    done
+  </button>
 </section>
 `;

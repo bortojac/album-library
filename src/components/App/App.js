@@ -8,14 +8,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchOpen: false,
+      searchActive: false,
     };
     this.handleOpenSearch = this.handleOpenSearch.bind(this);
+  }
+
+  componentDidMount() {
     this.props.getAccessToken();
   }
 
   handleOpenSearch() {
-    this.setState({ searchOpen: !this.state.searchOpen });
+    this.setState({ searchActive: !this.state.searchActive });
   }
 
   render() {
@@ -23,7 +26,7 @@ class App extends Component {
       <div className="app">
         <Header openSearch={this.handleOpenSearch}/>
         <main className="app__main">
-          <Search searchOpen={this.state.searchOpen}/>
+          <Search active={this.state.searchActive}/>
           <Library />
         </main>
       </div>

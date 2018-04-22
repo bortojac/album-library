@@ -23,7 +23,7 @@ export const fetchSearchResults = (term) => {
   return dispatch => {
     dispatch(requestSearch(term));
     return fetch(
-      `https://api.spotify.com/v1/search?type=album&q=${term}`,
+      `https://api.spotify.com/v1/search?type=album&q=${term}&limit=3`,
       {
         method: 'GET',
         headers: {

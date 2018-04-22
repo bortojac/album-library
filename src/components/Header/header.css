@@ -1,6 +1,7 @@
 .header {
   background-color: #fff;
   display: flex;
+  align-items: center;
   border-bottom: solid .2rem #000;
 }
 
@@ -12,7 +13,7 @@
   font-size: 1.5rem;
 }
 
-.header__p {
-
+.header__icon {
+  margin-right: 1rem;
 }
 

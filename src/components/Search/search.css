@@ -9,11 +9,11 @@
   transition: max-height 1s ease;
 }
 
-.searchContainer--searchOpen {
+.searchContainer--active {
   max-height: 50%;
 }
 
-.searchContainer--searchClosed {
+.searchContainer--closed {
   max-height: 0;
 }
 

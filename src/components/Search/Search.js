@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AlbumList from '../AlbumList/AlbumList';
+import AlbumList from '../AlbumList';
 import './search.css';
 
 class Search extends Component {
@@ -37,14 +37,14 @@ class Search extends Component {
   render() {
     return (
       <section
-        className={`searchContainer ${this.props.searchOpen ? 'searchContainer--searchOpen' : 'searchContainer--searchClosed'}`}>
+        className={`searchContainer ${this.props.active ? 'searchContainer--active' : 'searchContainer--closed'}`}>
         <input
           className="searchContainer__input"
           placeholder="Search for an Artist or Album"
           onChange={this.handleChange}
           onKeyDown={this.handleKeyDown}
         />
-        <AlbumList searchFlag/>
+        <AlbumList searchFlag />
         <button className="searchContainer__button" type="button">done</button>
       </section>
     );

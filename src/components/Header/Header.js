@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faPlusCircle } from '@fortawesome/fontawesome-free-solid';
 import './header.css';
 
 class Header extends Component {
@@ -15,7 +17,12 @@ class Header extends Component {
     return (
       <div className="header">
         <h1 className="header__h1">Album Library</h1>
-        <p className="header__icon" onClick={this.handleClick}>Click Me</p>
+        <FontAwesomeIcon
+          className="header__icon"
+          onClick={this.handleClick}
+          icon={faPlusCircle}
+          size="2x"
+        />
       </div>
     );
   }
