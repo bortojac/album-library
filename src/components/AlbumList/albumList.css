@@ -1,16 +1,19 @@
-.albumListContainer--searchResults {
+.albumListContainer {
   display: flex;
   width: 100%;
-  flex: 1;
+  font-size: 1.5rem;
   flex-direction: column;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
-.albumListContainer--library {
-  display: flex;
-  width: 100%;
+.albumListContainer--searchResults {
   flex: 1;
-  overflow-y: scroll;
-  overflow-x: hidden;
+}
+
+@media screen and (min-width: 641px) {
+
+  .albumListContainer--library {
+    width: 50%;
+  }
+
 }

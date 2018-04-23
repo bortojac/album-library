@@ -1,6 +1,7 @@
 import {
   REQUESTED_SEARCH,
   RECEIVED_SEARCH,
+  ADD_ALBUM,
 } from './types';
 import { accessToken } from './authActions';
 
@@ -39,5 +40,12 @@ export const fetchSearchResults = (term) => {
       },
       networkError => console.log(networkError.message)
     ).then(jsonResponse => dispatch(receiveSearch(jsonResponse)));
+  };
+}
+
+export const addAlbum = (album) => {
+  return {
+    type: ADD_ALBUM,
+    album: album,
   };
 }

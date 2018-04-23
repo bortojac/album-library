@@ -1,0 +1,31 @@
+.library {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  align-items: center;
+  min-height: 40%;
+  width: 100%;
+}
+
+.library__h1 {
+  font-size: 1.5rem;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.library__button {
+  padding: .5rem;
+  margin: 1rem 0;
+  height: 4rem;
+  border: solid .2rem #000;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 641px) {
+  .library__h1 {
+    width: 50%;
+  }
+  .library {
+    width: 50%;
+  }
+}

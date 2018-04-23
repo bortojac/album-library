@@ -4,6 +4,34 @@ import { faPlusCircle } from '@fortawesome/fontawesome-free-solid';
 import './album.css';
 
 class Album extends Component {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const libAlbumNames = nextProps.library.map(albumObj => albumObj.album);
+    const libAlbumArtists = nextProps.library.map(albumObj => albumObj.artist);
+    return {
+      disable: libAlbumArtists.includes(nextProps.albumObj.artist) && libAlbumNames.includes(nextProps.albumObj.album) ? true : false,
+    };
+  }
+
+  constructor(props) {
+      super(props);
+      this.state = {
+        disable: false,
+      };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    const libAlbumNames = this.props.library.map(albumObj => albumObj.album);
+    const libAlbumArtists = this.props.library.map(albumObj => albumObj.artist);
+
+    if(libAlbumArtists.includes(this.props.albumObj.artist) && libAlbumNames.includes(this.props.albumObj.album)) {
+      this.setState({ disable: true });
+    } else {
+      this.props.addAlbum(this.props.albumObj);
+      this.setState({ disable: true })
+    }
+  }
+  
   render() {
     return (
       <div className="albumContainer">
@@ -29,7 +57,11 @@ class Album extends Component {
           </li>
         </ul>
           {this.props.searchFlag &&
-            <FontAwesomeIcon className="albumContainer__icon" icon={faPlusCircle} size="2x"/>
+            <FontAwesomeIcon
+              className={`albumContainer__icon ${this.state.disable ? "albumContainer__icon--disabled" : "albumContainer__icon--enabled"}`}
+              onClick={this.handleClick}
+              icon={faPlusCircle}
+            />
           }
       </div>
     );

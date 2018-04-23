@@ -2,10 +2,7 @@ import { connect } from 'react-redux';
 import { fetchSearchResults } from '../../store/actions';
 import Search from './Search';
 
-const mapStateToProps = state => {
-  return {
-  };
-};
+const mapStateToProps = state => ({ });
 
 const mapDispatchToProps = dispatch => {
   return {

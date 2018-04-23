@@ -14,7 +14,7 @@ exports[`renders correctly 1`] = `
     </h1>
     <svg
       aria-hidden="true"
-      className="svg-inline--fa fa-plus-circle fa-w-16 fa-2x header__icon"
+      className="svg-inline--fa fa-plus-circle fa-w-16 header__icon"
       data-icon="plus-circle"
       data-prefix="fas"
       onClick={[Function]}
@@ -33,10 +33,21 @@ exports[`renders correctly 1`] = `
   <main
     className="app__main"
   >
-    <div>
-      <div
-        className="albumListContainer--library"
-      />
+    <div
+      className="library"
+    >
+      <h1
+        className="library__h1"
+      >
+        The Top Shelf
+      </h1>
+      <button
+        className="library__button"
+        onClick={[Function]}
+        type="button"
+      >
+        Load more
+      </button>
     </div>
   </main>
 </div>

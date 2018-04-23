@@ -20,3 +20,5 @@ export const getAlbumListState = createSelector(
     );
   }
 )
+
+export const getLibraryAlbums = (state) => state.library.albums

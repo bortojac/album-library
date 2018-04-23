@@ -11,6 +11,7 @@ class Search extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange(e) {
@@ -26,13 +27,16 @@ class Search extends Component {
 
   handleSearch() {
     if (this.state.searchInput) {
-      console.log('worked');
-        this.props.fetchSearchResults(this.state.searchInput);
+      this.props.fetchSearchResults(this.state.searchInput);
     }
     else {
-        return;
+      return;
     }
-}
+  }
+
+  handleClick() {
+    this.props.toggleSearch();
+  }
 
   render() {
     return (
@@ -45,7 +49,7 @@ class Search extends Component {
           onKeyDown={this.handleKeyDown}
         />
         <AlbumList searchFlag />
-        <button className="searchContainer__button" type="button">done</button>
+        <button className="searchContainer__button" type="button" onClick={this.handleClick}>done</button>
       </section>
     );
   }

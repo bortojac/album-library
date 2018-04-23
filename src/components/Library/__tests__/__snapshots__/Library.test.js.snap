@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="library"
+>
+  <h1
+    className="library__h1"
+  >
+    The Top Shelf
+  </h1>
+  <button
+    className="library__button"
+    onClick={[Function]}
+    type="button"
+  >
+    Load more
+  </button>
+</div>
+`;

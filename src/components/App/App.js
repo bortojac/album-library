@@ -10,23 +10,23 @@ class App extends Component {
     this.state = {
       searchActive: false,
     };
-    this.handleOpenSearch = this.handleOpenSearch.bind(this);
+    this.handleToggleSearch = this.handleToggleSearch.bind(this);
   }
 
   componentDidMount() {
     this.props.getAccessToken();
   }
 
-  handleOpenSearch() {
+  handleToggleSearch() {
     this.setState({ searchActive: !this.state.searchActive });
   }
 
   render() {
     return (
       <div className="app">
-        <Header openSearch={this.handleOpenSearch}/>
+        <Header toggleSearch={this.handleToggleSearch}/>
         <main className="app__main">
-          <Search active={this.state.searchActive}/>
+          <Search active={this.state.searchActive} toggleSearch={this.handleToggleSearch}/>
           <Library />
         </main>
       </div>

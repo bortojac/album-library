@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
-
 import {
   RECEIVED_SEARCH,
   REQUESTED_SEARCH,
@@ -29,7 +28,7 @@ export const searchResults = (
 
 const addAlbumToState = (state, album) => {
   let clone = _.cloneDeep(state);
-  clone.push(album);    // add album obj to deep clone of state
+  clone.albums.push(album);    // add album obj to deep clone of state
   return clone;
 }
 

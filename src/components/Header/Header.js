@@ -10,7 +10,7 @@ class Header extends Component {
   }
 
   handleClick() {
-    this.props.openSearch();
+    this.props.toggleSearch();
   }
 
   render() {
@@ -21,7 +21,6 @@ class Header extends Component {
           className="header__icon"
           onClick={this.handleClick}
           icon={faPlusCircle}
-          size="2x"
         />
       </div>
     );

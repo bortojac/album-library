@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Search from '../Search';
 
-jest.mock('../../AlbumList'); // mock AlbumList
+jest.mock('../../AlbumList');
 
 // check render
 it('renders without crashing', () => {
@@ -15,9 +15,7 @@ it('renders without crashing', () => {
 // snapshot
 it('renders correctly', () => {
   const tree = renderer
-    .create(
-        <Search />
-  )
+    .create(<Search />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

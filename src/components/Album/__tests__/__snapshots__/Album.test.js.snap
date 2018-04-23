@@ -2,16 +2,39 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="header"
+  className="albumContainer"
 >
-  <h1
-    className="header__h1"
+  <figure
+    className="albumContainer__figure"
   >
-    Album Library
-  </h1>
+    <img
+      alt="undefined - Album Cover"
+      className="albumContainer__img"
+      src=""
+    />
+  </figure>
+  <ul
+    className="albumDescription"
+  >
+    <li
+      className="albumContainer__li"
+    >
+      Album: 
+    </li>
+    <li
+      className="albumContainer__li"
+    >
+      Artist: 
+    </li>
+    <li
+      className="albumContainer__li"
+    >
+      Year: 
+    </li>
+  </ul>
   <svg
     aria-hidden="true"
-    className="svg-inline--fa fa-plus-circle fa-w-16 header__icon"
+    className="svg-inline--fa fa-plus-circle fa-w-16 albumContainer__icon albumContainer__icon--enabled"
     data-icon="plus-circle"
     data-prefix="fas"
     onClick={[Function]}

@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import AlbumList from '../AlbumList';
 
-jest.mock('../../Album/Album'); // mock Album
-
 // check render
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -15,9 +13,7 @@ it('renders without crashing', () => {
 // snapshot
 it('renders correctly', () => {
   const tree = renderer
-    .create(
-        <AlbumList />
-  )
+    .create(<AlbumList />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
