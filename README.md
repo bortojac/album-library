@@ -1,4 +1,4 @@
-# Album Library - Jack Borto 
+# Album Library
 Simple Album Library App using the Spotify API and Implicit Grant Authentication
 
 ## Getting Started
