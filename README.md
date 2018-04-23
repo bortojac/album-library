@@ -16,7 +16,7 @@ Then just open http://localhost:3000 in your browser.
 ### Jest Unit and Snapshot Tests
 
 ```
-npm test
+npm test --watch
 ```
 
 ## Built With the following libraries and Create React App
